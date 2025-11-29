@@ -75,6 +75,12 @@ const destinationData: Record<string, any> = {
   },
 }
 
+export function generateStaticParams() {
+  return Object.keys(destinationData).map((slug) => ({
+    slug,
+  }))
+}
+
 export default async function DestinationDetailPage({ params }: DestinationDetailPageProps) {
   const resolvedParams = await params
   const destination = destinationData[resolvedParams.slug] || destinationData.paris

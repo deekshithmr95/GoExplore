@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  output: 'export',
+  basePath: process.env.GITHUB_PAGES === 'true' ? '/GoExplore' : '',
   images: {
     remotePatterns: [
       {
@@ -13,6 +15,7 @@ const nextConfig = {
         hostname: 'via.placeholder.com',
       },
     ],
+    unoptimized: true,
   },
 }
 
