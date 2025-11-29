@@ -307,7 +307,7 @@ export default function InteractiveWorldMap() {
                   {selectedLocation.country}
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 italic">
-                  "{selectedLocation.description}"
+                  &quot;{selectedLocation.description}&quot;
                 </p>
 
                 {/* Rating */}

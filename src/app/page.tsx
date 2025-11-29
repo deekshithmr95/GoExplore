@@ -31,7 +31,7 @@ export default function Home() {
               </div>
 
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
-                Explore the world's most amazing destinations. Find hidden gems, discover local attractions, and plan your perfect journey all in one place.
+                Explore the world&apos;s most amazing destinations. Find hidden gems, discover local attractions, and plan your perfect journey all in one place.
               </p>
 
               {/* Stats with animation */}
@@ -147,7 +147,7 @@ export default function Home() {
               Popular <span className="text-gradient">Destinations</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Start your journey with some of the world's most visited and loved destinations
+              Start your journey with some of the world&apos;s most visited and loved destinations
             </p>
           </div>
 

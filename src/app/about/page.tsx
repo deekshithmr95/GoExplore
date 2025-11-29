@@ -9,7 +9,7 @@ export default function About() {
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Our Mission</h3>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            GoExplore is dedicated to inspiring travelers and adventurers to discover the world's most 
+            GoExplore is dedicated to inspiring travelers and adventurers to discover the world&apos;s most 
             beautiful and unique destinations. We believe that travel should be accessible, fun, and 
             enriching for everyone.
           </p>

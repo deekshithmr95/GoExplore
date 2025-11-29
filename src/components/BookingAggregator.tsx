@@ -403,7 +403,7 @@ export default function BookingAggregator() {
           <ul className="space-y-2 text-blue-800 dark:text-blue-200">
             <li>✓ We compare prices from multiple booking platforms in real-time</li>
             <li>✓ Filter by price, rating, and platform to find the perfect deal</li>
-            <li>✓ Click "Book Now" to visit the booking platform and complete your reservation</li>
+            <li>✓ Click &quot;Book Now&quot; to visit the booking platform and complete your reservation</li>
             <li>✓ We help you save money by showing all available options in one place</li>
           </ul>
         </div>

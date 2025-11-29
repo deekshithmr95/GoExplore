@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'display': ['Poppins', 'ui-rounded', 'system-ui', 'sans-serif'],
-        'body': ['Poppins', 'system-ui', 'sans-serif'],
+        'display': ['Playfair Display', 'Georgia', 'serif'],
+        'body': ['Inter', 'Outfit', 'system-ui', 'sans-serif'],
         'mono': ['Space Mono', 'monospace'],
       },
       colors: {

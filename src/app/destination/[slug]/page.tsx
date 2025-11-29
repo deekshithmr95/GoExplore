@@ -4,9 +4,9 @@ import TopAttractionsSection from '@/components/TopAttractionsSection'
 import EventsSection from '@/components/EventsSection'
 
 interface DestinationDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 const destinationData: Record<string, any> = {

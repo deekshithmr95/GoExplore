@@ -290,7 +290,7 @@ export default function DealsAndOffers() {
             <div>
               <div className="text-4xl mb-3">🔗</div>
               <h3 className="text-lg font-bold mb-2">Click Claim Deal</h3>
-              <p>Each deal links directly to the booking platform. You'll be taken there with all the details.</p>
+              <p>Each deal links directly to the booking platform. You&apos;ll be taken there with all the details.</p>
             </div>
             <div>
               <div className="text-4xl mb-3">✨</div>
