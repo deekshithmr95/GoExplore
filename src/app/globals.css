@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 50%, #e8f1ff 100%);
+  background-attachment: fixed;
+  color: #111827;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 50%, #e8f1ff 100%);
+    background-attachment: fixed;
+    color: #111827;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0f1419 0%, #1a1f3a 50%, #16213e 100%);
+    background-attachment: fixed;
+    color: #f3f4f6;
+  }
+}
+
+code {
+  font-family: 'Space Mono', monospace;
+}
+
+main {
+  min-height: calc(100vh - 200px);
+}
+
+/* Interactive button styles */
+@layer components {
+  .btn-interactive {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg overflow-hidden group transition-all duration-300 ease-smooth;
+  }
+
+  .btn-primary {
+    @apply btn-interactive bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg hover:shadow-glow-lg hover:-translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply btn-interactive bg-gradient-to-r from-crystal-500 to-crystal-600 text-white shadow-lg hover:shadow-glow-lg hover:-translate-y-1;
+  }
+
+  .btn-accent {
+    @apply btn-interactive bg-gradient-to-r from-accent-500 to-accent-600 text-white shadow-lg hover:shadow-glow-lg hover:-translate-y-1;
+  }
+
+  .btn-outline {
+    @apply btn-interactive border-2 border-primary-600 text-primary-600 dark:border-primary-400 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors;
+  }
+
+  /* Card hover effects */
+  .card-interactive {
+    @apply bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 ease-smooth border border-gray-100 dark:border-gray-700;
+  }
+
+  .card-gradient {
+    @apply bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900;
+  }
+
+  /* Glow effects */
+  .glow-effect {
+    @apply relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary-400/0 before:via-primary-400/50 before:to-primary-400/0 before:rounded-lg before:blur-xl before:-z-10;
+  }
+
+  /* Smooth scroll sections */
+  .section-animate {
+    @apply transition-all duration-500 ease-smooth;
+  }
+
+  /* Shimmer loading effect */
+  .shimmer-bg {
+    @apply bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700;
+    background-size: 1200px 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border border-white/20 dark:border-gray-700/20;
+  }
+
+  /* Smooth hover scale */
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  /* Smooth fade in animation */
+  .fade-in {
+    @apply animate-fade-in-up [animation-fill-mode:both];
+  }
+
+  /* Text gradient effect */
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600 dark:from-primary-400 dark:to-accent-400;
+  }
+
+  .text-gradient-alt {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-crystal-500 to-primary-600 dark:from-crystal-400 dark:to-primary-500;
+  }
+
+  /* Interactive link styles */
+  a {
+    @apply transition-colors duration-300 ease-smooth;
+  }
+
+  /* Smooth transitions on all interactive elements */
+  button, input, select, textarea {
+    @apply transition-all duration-300 ease-smooth;
+  }
+}
+
+/* Stagger animation for list items */
+@for $i from 1 to 10 {
+  @media (min-width: 0px) {
+    li:nth-child($i) {
+      animation-delay: calc($i * 50ms);
+    }
+  }
+}
+
+/* Smooth page transitions */
+@supports (animation: fade-in 0.3s ease-out forwards) {
+  body {
+    animation: fade-in 0.3s ease-out;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 dark:ring-offset-gray-900 rounded-lg;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary-600 text-white;
+}
+
+::-moz-selection {
+  @apply bg-primary-600 text-white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #1d4ed8);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2563eb, #1e40af);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #3b82f6 transparent;
+  scrollbar-width: thin;
+}
+
+/* Smooth transitions for theme switching */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply transition-colors duration-300;
+  }
+}
